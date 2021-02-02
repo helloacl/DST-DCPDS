@@ -49,6 +49,7 @@ bash run_multiwoz2.1_all.sh
 ```
 
 For `teacher-forcing` set the `mix_teaching_force` to `0`
+
 For `uniform scheduled sampling` set the `mix_teaching_force` to `1` 
 
 
