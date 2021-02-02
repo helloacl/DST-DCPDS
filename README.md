@@ -6,7 +6,11 @@
 
 * Install python packages:
 ~~~
-pip install -r requirements.text
+pip install -r requirements_train.text
 ~~~
 
+## Usages
+### Data preprocessing
+We conduct experiments on the following datasets:
+* 
   
