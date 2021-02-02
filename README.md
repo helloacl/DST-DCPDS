@@ -28,15 +28,33 @@ $ mv ontology.json ..
 $ python convert_to_glue_format.py
 ```
 
-## Pretrained BERT Download
+### Pretrained BERT Download
  * Model [Download](https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-uncased.tar.gz) to get `bert-base-uncased.tar.gz`
  * Vocab [Download](https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-uncased-vocab.txt) to get `bert-base-uncased-vocab.txt`
 ```
 cd /home/user/DST-DCPDS
 # rename model file
 mv bert-base-uncased.tar.gz bert-base-uncased.model
-# mv file to targe file
+# mv file to target file
 mv bert-base-uncased.model /home/user/DST-DCPDS/data/pytorch_bert/.pytorch_pretrained_bert/.
 mv bert-base-uncased-vocab.txt /home/user/DST-DCPDS/data/pytorch_bert/.pytorch_pretrained_bert/.
 ```
+
+### Train
+Take MultiWOZ2.1 as an example:
+
+- training for DST-DCODS for both-level
+```bash
+bash run_multiwoz2.1_all.sh
+```
+
+For `teacher-forcing` set the `mix_teaching_force` to `0`
+For `uniform scheduled sampling` set the `mix_teaching_force` to `1` 
+
+
+
+
+
+
+
   
