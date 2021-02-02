@@ -18,8 +18,7 @@ We conduct experiments on the following datasets:
 
 We use the same preprocessing steps for both datasets. For example, preprocessing MultiWOZ 2.1:
 ```bash
-$ pwd
-/home/user/DST-DCPDS
+cd /home/user/DST-DCPDS
 # download multiwoz 2.1 dataset
 # preprocess datasets for training DST and STP jointly
 $ unzip -j MULTIWOZ2.1.zip -d data/multiwoz2.1-update/original
