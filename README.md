@@ -42,7 +42,7 @@ mv bert-base-uncased-vocab.txt /home/user/DST-DCPDS/data/pytorch_bert/.pytorch_p
 ### Train
 Take MultiWOZ2.1 as an example:
 
-- training for DST-DCODS for both-level
+- training for DST-DCPDS for both-level
 ```bash
 bash run_multiwoz2.1_all.sh
 ```
