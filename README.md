@@ -2,6 +2,10 @@
 
 We develop our code baed on [CHAN](https://github.com/smartyfh/CHAN-DST.git).  
 
+## Abstract 
+In a task-oriented dialogue, users can actively or passively change their requests. For example, users can relax their constraints, when no target satisfies the prior constraints. Such change in the dialogue state (value-delete) may not be easily tracked. Besides, in multi-domain dialogue scenarios, slot constraints may also come from another existing slots value. To solve the above two problems, we propose a Dialogue State Tracking with Dialogue Context and Previous Dialogue States (DST-DCPDS) model. It employs a hierarchical structure to extract contextual representation and merges explicitly predicted dialogue states to contextual representation in turn- and passage-level. Experimental results verify the effectiveness of our approach. Besides, our model achieves state-of-the-art performance on MultiWOZ 2.0 and 2.1 datasets (joint accuracy 55.03% and 58.55% respectively) without any data balance strategies.
+
+![Image text](https://github.com/helloacl/DST-DCPDS/blob/main/image/DST-DCPDS.pdf)
 
 ## Requirements
 
