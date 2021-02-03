@@ -47,9 +47,8 @@ mv bert-base-uncased-vocab.txt /home/user/DST-DCPDS/data/pytorch_bert/.pytorch_p
 ```
 
 ### Train
-Take MultiWOZ2.1 as an example:
-
-- training for DST-DCPDS for both-level
+Take DST-DCPDS for both-level training as an example:
+- Train
 ```bash
 bash run_multiwoz2.1_all.sh
 ```
@@ -58,10 +57,56 @@ For `teacher-forcing` set the `mix_teaching_force` to `0`
 
 For `uniform scheduled sampling` set the `mix_teaching_force` to `1` 
 
+###  Evaluation
 
+Take DST-DCPDS for both-level training as an example:
 
+**General performance** 
 
+-  uncomment the last line in the `run_multiwoz2.1_all.sh`
+-  run sh 
+```
+bash run_multiwoz2.1_all.sh
+```
+**Related-slot**
 
+- select taxi domain dialogues from the test datasets to generate file `select_taxi.tsv`
+```
+python select_taxi_dialouge.py
+```
+-  move selected dialogue to target folder 
+```
+mv select_taxi.tsv data/multiwoz2.1-update/.
+```
+- Manually replace the explicit expression to implicit form, for example replace `rice house` in the utterance to `restaurant`. **You can also skip the steps**.
+- replace the evaluation file name in `code\main.py` from `test.tsv` to `select_taxi.tsv`
+- run the prediction process
+```
+bash run_multiwoz2.1_all.sh
+```
+- run evaluation process
+```
+python eval_related_slot.py
+```
+**Value-delete**
 
+- select dialogues, which has value-delete phenomenon, from test datasets to generate file `selected_dialog_cand.json`
+```
+python select_value_delete.py
+```
+- Manually replace the slot value in the dialogue, which has value-delete phenomenon  with `[slot-name]`, for example replace `rice house` with `[resturant-name]`. The template file name as `augment_dialog_cand.json`
 
-  
+- Augment dialogue to generate file `update_test.tsv`
+```
+python augment_value_delete.py
+```
+
+- replace the evaluation file name in `code\main.py` from `test.tsv` to `update_test.tsv`
+- run the prediction process
+```
+bash run_multiwoz2.1_all.sh
+```
+- run evaluation process
+```
+python eval_value_delete.py
+```
