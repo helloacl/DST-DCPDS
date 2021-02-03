@@ -1,6 +1,6 @@
 # DST-DCPDS
 
-We develop our code baed on CHAN](https://github.com/smartyfh/CHAN-DST.git).  
+We develop our code baed on [CHAN](https://github.com/smartyfh/CHAN-DST.git).  
 
 
 ## Requirements
