@@ -11,7 +11,7 @@ We develop our code baed on [CHAN](https://github.com/smartyfh/CHAN-DST.git).
 
 * Install python packages:
 ~~~
-pip install -r requirements_train.text
+pip install -r requirements_train.txt
 ~~~
 
 ## Usages
