@@ -1,3 +1,7 @@
+# Our paper
+[Dialogue State Tracking with Multi-Level Fusion of Predicted Dialogue
+States and Conversations](https://arxiv.org/pdf/2107.05168.pdf)
+
 # DST-DCPDS
 
 We develop our code baed on [CHAN](https://github.com/smartyfh/CHAN-DST.git).  
